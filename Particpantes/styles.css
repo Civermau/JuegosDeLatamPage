@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+    a:hover {
+        color: #007bff;
+    }
+
+/* Header styles */
+header {
+    padding: 20px;  
+    background-color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.button{
+    border-radius: 30px;
+    background-color: #fff;
+    
+}
+
+.player_alive {
+    background-color: #008909;
+    border: 1px solid #007204;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+    .player_alive h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .player_alive p {
+        margin-bottom: 5px;
+    }
+    .player_alive span:after{
+        content: "Alive";
+    }
+
+.player_dead {
+    background-color: #FF2303;
+    border: 1px solid #CC1B04;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+    .player_dead h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .player_dead p {
+        margin-bottom: 5px;
+    }
+
+    .player_dead span:after{
+        content: "Dead";
+    }
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+}

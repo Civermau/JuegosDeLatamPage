@@ -1,0 +1,90 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+h1, h2, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+    a:hover {
+        color: #007bff;
+    }
+
+/* Header styles */
+header {
+    padding: 40px;
+    background-color: #fff;
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+/* Hero section styles */
+.Contenders,
+.Rules,
+.Mods {
+    padding: 80px 0;
+    text-align: center;
+    color: #C8AD7F;
+}
+
+.Contenders {
+    background-image: url("Images/Contenders.jpg"); /* Replace with your image URL */
+}
+
+.Rules {
+    background-image: url("Images/Rules.jpg"); /* Replace with your image URL */
+}
+
+.Mods {
+    background-image: url("Images/Mods.jpg"); /* Replace with your image URL */
+}
+
+    .Contenders h2,
+    .Rules h2,
+    .Mods h2 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    .Contenders p,
+    .Rules p,
+    .Mods p {
+        font-size: 1.2em;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+
+    .Contenders a,
+    .Rules a,
+    .Mods a {
+        background-color: #00063F;
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+
+/* Footer styles */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #eee;
+}
