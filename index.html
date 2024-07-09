@@ -3,35 +3,58 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JUEGOS DE LATAM 3</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="HeadFoot/header.css">
+	<link rel="stylesheet" href="HeadFoot/footer.css">
+	<title>JUEGOS DE LATAM 3</title>
+	<script>
+		function loadHeader() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "HeadFoot/header.html", true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {
+					document.getElementById("header-container").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
+
+		function loadFooter() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "HeadFoot/footer.html", true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {  // Check for successful response
+					document.getElementById("footer-container").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
+
+		loadHeader();
+		loadFooter();
+	</script>
+
 </head>
 <body>
-<header>
-	<h1>JUEGOS DE LATAM 3</h1>
-	<p>Uy ni idea</p>
-</header>
+	<div id="header-container"></div>
 
-<section class="Contenders">
-	<h2>PARTICIPANTES</h2>
-	<p>Mira en vivo el estatus de tus streamers favoritos</p>
-	<a href="/Particpantes">Call to Action Button</a>
-</section>
+	<section class="Contenders">
+		<h2>PARTICIPANTES</h2>
+		<p>Mira en vivo el estatus de tus streamers favoritos</p>
+		<a href="/Particpantes">Call to Action Button</a>
+	</section>
 
-<section class="Rules">
-	<h2>REGLAS</h2>
-	<p>Lee las reglas del evento!</p>
-	<a href="/Reglas">Call to Action Button</a>
-</section>
+	<section class="Rules">
+		<h2>REGLAS</h2>
+		<p>Lee las reglas del evento!</p>
+		<a href="/Reglas">Call to Action Button</a>
+	</section>
 
-<section class="Mods">
-	<h2>MODS</h2>
-	<p>Si te gustaron los mods, checa cuales hemos usado!</p>
-	<a href="/Mods">Call to Action Button</a>
-</section>
-
-<footer>
-	<p>&copy; 2024 DIVStudios</p>
-</footer>
+	<section class="Mods">
+		<h2>MODS</h2>
+		<p>Si te gustaron los mods, checa cuales hemos usado!</p>
+		<a href="/Mods">Call to Action Button</a>
+	</section>
+	<div id="footer-container"></div>
 </body>
 </html>

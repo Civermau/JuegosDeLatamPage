@@ -3,54 +3,79 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../HeadFoot/header.css">
+	<link rel="stylesheet" href="../HeadFoot/footer.css">
+	<title>JUEGOS DE LATAM 3 - Participantes</title>
+	<script>
+		function loadHeader() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "../HeadFoot/header.html", true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {
+					document.getElementById("header-container").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
+
+		function loadFooter() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "../HeadFoot/footer.html", true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {  // Check for successful response
+					document.getElementById("footer-container").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
+
+		loadHeader();
+		loadFooter();
+	</script>
 </head>
 	<title>Participantes</title>
 </head>
-
+	<div id="header-container"></div>
 	<body>
-		<header>
-			<h1>JUEGOS DE LATAM 3</h1>
-			<p>Uy ni idea</p>
-		</header>
-
 
 		<h1>Participantes</h1>
 		<div id="timer">[time left] para el evento!</div>
 
-		<div class="player_alive">
+		<div class="player_dead">
+			<img src="Images/randomike.png" alt="Randomike">
 			<h3>Randomike</h3>
 			<a href="https://www.twitch.tv/randomaik">Twitch</a>
 			<p><span></span></p>
 		</div>
 
-		<div class="player_dead">
+		<div class="player_alive">
+			<img src="Images/LordM4.png" alt="LordM4">
 			<h3>LordM4</h3>
 			<a href="https://www.twitch.tv/lord_m4">Twitch</a>
 			<p><span></span></p>
 		</div>
 
 		<div class="player_alive">
+			<img src="Images/EriHudson.png" alt="EriHudson">
 			<h3>Eri Hudson</h3>
 			<a href="https://www.twitch.tv/eriphantomhive">Twitch</a>
 			<p><span></span></p>
 		</div>
 
 		<div class="player_dead">
+			<img src="Images/LobitoGamer.png" alt="LobitoGamer">
 			<h3>LobitoGamer</h3>
 			<a href="https://www.twitch.tv/lobito_vtuber">Twitch</a>
 			<p><span></span></p>
 		</div>
-		
-	<div class="player_dead">
-		<h3>Andriuw</h3>
-		<a>Twitch</a>
-		<p><span></span></p>
-	</div>
 
-	<footer>
-			<p>&copy; 2024 DIVStudios</p>
-		</footer>
-
+		<div class="player_dead">
+			<img src="Images/DonAndriuw.png" alt="DonAndriuw">
+			<h3>Andriuw</h3>
+			<a>Twitch</a>
+			<p><span></span></p>
+		</div>
+		<div id="footer-container"></div>
 	</body>
 </html>

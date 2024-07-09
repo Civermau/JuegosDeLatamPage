@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../HeadFoot/header.css">
+    <link rel="stylesheet" href="../HeadFoot/footer.css">
+    <title>JUEGOS DE LATAM 3 - Reglas</title>
+    <script>
+        function loadHeader() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "../HeadFoot/header.html", true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById("header-container").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        function loadFooter() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "../HeadFoot/footer.html", true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {  // Check for successful response
+                    document.getElementById("footer-container").innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+
+        loadHeader();
+        loadFooter();
+    </script>
+</head>
+<body>
+    <div id="header-container"></div>
+    <h2>Lee atentamente las reglas:</h2>
+    <section class="Rules">
+        <p>Aqui encontraras todo lo que necesitas saber para participar en JUEGOS DE LATAM 3. Asegurate de leer y comprender las reglas para garantizar una experiencia justa y divertida para todos.</p>
+
+        <h3>Reglas Generales</h3>
+        <ul>
+            <li>Regla 1: Describe la primera regla del evento.</li>
+            <li>Regla 2: Describe la segunda regla del evento.</li>
+        </ul>
+
+        <h3>Reglas de Juego</h3>
+        <ul>
+            <li>Regla 1: Describe la primera regla especifica del juego.</li>
+            <li>Regla 2: Describe la segunda regla especifica del juego.</li>
+        </ul>
+
+        <h3>Reglas de Conducta</h3>
+        <ul>
+            <li>Regla 1: Describe la primera regla de comportamiento para los participantes.</li>
+            <li>Regla 2: Describe la segunda regla de comportamiento para los participantes.</li>
+        </ul>
+
+        <p>Para cualquier duda o aclaracion, puedes comunicarte con los organizadores a traves de nuestros canales oficiales.</p>
+    </section>
+    <div id="footer-container"></div>
+</body>
+</html>

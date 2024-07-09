@@ -1,96 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JUEGOS DE LATAM 3</title>
-  <style>
-    /* Basic styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../HeadFoot/header.css">
+	<link rel="stylesheet" href="../HeadFoot/footer.css">
+	<title>JUEGOS DE LATAM 3 - Mods</title>
+	<script>
+		function loadHeader() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "../HeadFoot/header.html", true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {
+					document.getElementById("header-container").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
 
-    h1, h2, p {
-      margin: 0;
-    }
+		function loadFooter() {
+			var xhr = new XMLHttpRequest();
+			xhr.open("GET", "../HeadFoot/footer.html", true);
+			xhr.onload = function () {
+				if (xhr.status === 200) {  // Check for successful response
+					document.getElementById("footer-container").innerHTML = xhr.responseText;
+				}
+			};
+			xhr.send();
+		}
 
-    a {
-      text-decoration: none;
-      color: #333;
-    }
+		loadHeader();
+		loadFooter();
+	</script>
 
-    a:hover {
-      color: #007bff;
-    }
-
-    /* Header styles */
-    header {
-      padding: 20px;
-      background-color: #fff;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 2em;
-    }
-
-    /* Hero section styles */
-    .hero {
-      padding: 80px 0;
-      text-align: center;
-      background-image: url("hero-image.jpg"); /* Replace with your image URL */
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-    }
-
-    .hero h2 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2em;
-      line-height: 1.5;
-      margin-bottom: 40px;
-    }
-
-    .hero a {
-      background-color: #00063F;
-      padding: 10px 20px;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-    }
-
-    /* Footer styles */
-    footer {
-	position: absolute;
-	bottom: 0;
-      padding: 20px;
-      text-align: center;
-      background-color: #eee;
-    }
-  </style>
+	<title>JUEGOS DE LATAM 3</title>
 </head>
 <body>
-  <header>
-    <h1>JUEGOS DE LATAM 3</h1>
-    <p>Uy ni idea</p>
-  </header>
-
-  <section class="hero">
-    <h2>PARTICIPANTES</h2>
-    <p>Mira en vivo el estatus de tus streamers favoritos</p>
-    <a href="#">Call to Action Button</a>
-  </section>
-
-  <footer>
-	<p>&copy; 2024 DIVStudios</p>
-  </footer>
+	<div id="header-container"></div>
+	LA EPICA LISTA DE LOS PUTISIMOS MODS
+	<div id="footer-container"></div>
 </body>
 </html>
 
